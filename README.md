@@ -29,7 +29,7 @@ Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orche
 
 One of the things the DevOps movement taught us in the past is to look at it as capabilities instead of a maturity model. DevOps transformation also taught us that it is not just tools and technologies that bring about change; process and people are also significantly important ([Accelerate](https://itrevolution.com/product/accelerate/), [State of DevOps report](https://dora.dev/research/)). DevOps as a whole culture is still the foundation to get meaningful impact in the agentic era as well.
 
-A lot of the technical capabilities in DevOps, like CI/CD, can bring a lot more benefits with AI. We will also look at what additional capabilities are needed on top. We will be primarily focusing on these capabilities here.
+A lot of the technical capabilities in DevOps, like CI/CD, can bring a lot more benefits with AI. CI/CD and automations now get a boost with agents, because agents can look at a stack trace, find issues, and even raise a PR to fix them. We will also look at what additional capabilities are needed on top. We will be primarily focusing on these capabilities here.
 
 ## Specs for Building New Features
 
@@ -51,5 +51,9 @@ Architecture, API design, and the domain model: the things that are strategic.
 Reference: [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/)
 
 ### Conductor vs. Orchestrator
+
+**Conductor:** You work hands-on with an agent in a chat-based interface and stay in the loop: asking questions about the codebase, brainstorming ideas to decide what to build, and authoring the spec. This is where human involvement is most needed.
+
+**Orchestrator:** Once there is a good specification, you hand the work off to agents and no longer have to stay in the inner loop. You manage the outer loop: reviewing what the agents produce against the acceptance criteria and deciding what comes next.
 
 Reference: [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
