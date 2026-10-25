@@ -8,7 +8,7 @@ Content lives as Markdown files (for example under `docs/`) and will be added ov
 
 ## Contents
 
-_Links to documents will be listed here._
+- [Current State: How AI Is Changing Software Development](docs/current-state.md)
 
 ## Contributing
 
