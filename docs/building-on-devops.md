@@ -1,4 +1,4 @@
-# How Do We Go About It
+# Building on DevOps
 
 One of the things the DevOps movement taught us in the past is to look at it as capabilities instead of a maturity model. DevOps transformation also taught us that it is not just tools and technologies that bring about change; process and people are also significantly important (refer to the [Accelerate](https://itrevolution.com/product/accelerate/) book or the [State of DevOps report](https://dora.dev/research/)). DevOps as a whole culture is still the foundation to get meaningful impact in the agentic era as well.
 
