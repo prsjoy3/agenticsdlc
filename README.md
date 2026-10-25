@@ -2,6 +2,8 @@
 
 A guide on adopting agentic AI in the software development lifecycle (SDLC).
 
+_Things are rapidly evolving; this is current as of October 2026._
+
 ## Contents
 
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
@@ -11,8 +13,6 @@ A guide on adopting agentic AI in the software development lifecycle (SDLC).
 - [Concepts](#concepts)
 
 ## Current State: How AI Is Changing Software Development
-
-_Things are rapidly evolving; this is current as of October 2026._
 
 With the advent of AI, typing code is obsolete.
 
