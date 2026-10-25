@@ -7,6 +7,7 @@ A guide on adopting agentic AI in the software development lifecycle (SDLC).
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
 - [Building on DevOps](#building-on-devops)
 - [Specs for Building New Features](#specs-for-building-new-features)
+- [Infrastructure for Running Loops](#infrastructure-for-running-loops)
 - [Concepts](#concepts)
 
 ## Current State: How AI Is Changing Software Development
@@ -40,7 +41,13 @@ The first capability is specs for building new features. At a minimum, a specifi
 - Acceptance criteria in Given/When/Then format
 - Any other additional context
 
+For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
+
 Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a conductor and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the outer loop.
+
+## Infrastructure for Running Loops
+
+A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running loops. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
 
 ## Concepts
 
