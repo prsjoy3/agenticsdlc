@@ -3,3 +3,5 @@
 With the advent of AI, typing code is obsolete.
 
 Typing code is no longer the bottleneck. It started with code completion, then to an AI assistant sitting with a classic IDE, to chat-based agent-first interfaces. As this profession was happening, LLMs have gotten so much better at understanding larger instructions.
+
+Software engineers are being relieved of typing duties and can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model: the things that are strategic.
