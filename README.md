@@ -6,8 +6,8 @@ A guide on adopting agentic AI in the software development lifecycle (SDLC).
 
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
 - [Building on DevOps](#building-on-devops)
-- [Specs for Building New Features](#specs-for-building-new-features)
-- [Infrastructure for Running Loops](#infrastructure-for-running-loops)
+  - [Specs for Building New Features](#specs-for-building-new-features)
+  - [Infrastructure for Running Loops](#infrastructure-for-running-loops)
 - [Concepts](#concepts)
 
 ## Current State: How AI Is Changing Software Development
@@ -32,7 +32,7 @@ One of the things the DevOps movement taught us in the past is to look at it as 
 
 A lot of the technical capabilities in DevOps, like CI/CD, can bring a lot more benefits with AI. CI/CD and automations now get a boost with agents, because agents can look at a stack trace, find issues, and even raise a PR to fix them. We will also look at what additional capabilities are needed on top. We will be primarily focusing on these capabilities here.
 
-## Specs for Building New Features
+### Specs for Building New Features
 
 The first capability is specs for building new features. At a minimum, a specification should contain:
 
@@ -45,7 +45,7 @@ For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contra
 
 Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a conductor and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the outer loop.
 
-## Infrastructure for Running Loops
+### Infrastructure for Running Loops
 
 A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running loops. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
 
