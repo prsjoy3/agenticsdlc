@@ -7,6 +7,7 @@ A guide on adopting agentic AI in the software development lifecycle (SDLC).
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
 - [Building on DevOps](#building-on-devops)
 - [Specs for Building New Features](#specs-for-building-new-features)
+- [Concepts](#concepts)
 
 ## Current State: How AI Is Changing Software Development
 
@@ -18,11 +19,11 @@ Typing code is no longer the bottleneck. It started with code completion, then t
 
 This is a huge shift since the advent of higher-level programming languages: now we have non-deterministic compilers in LLMs.
 
-Software engineers are being relieved of typing duties and can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model: the things that are strategic.
+Software engineers are being relieved of typing duties and can now focus solely on [durable decisions](#durable-decisions), like architecture, API design, and the domain model: the things that are strategic.
 
 While chat-based interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop.
 
-Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
+Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
 ## Building on DevOps
 
@@ -39,4 +40,16 @@ The first capability is specs for building new features. At a minimum, a specifi
 - Acceptance criteria in Given/When/Then format
 - Any other additional context
 
-Use conductor mode to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a conductor and author the spec, and then switch to being an orchestrator and manage the outer loop.
+Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a conductor and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the outer loop.
+
+## Concepts
+
+### Durable Decisions
+
+Architecture, API design, and the domain model: the things that are strategic.
+
+Reference: [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/)
+
+### Conductor vs. Orchestrator
+
+Reference: [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
