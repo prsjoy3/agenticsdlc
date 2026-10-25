@@ -49,7 +49,7 @@ Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involv
 
 A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
 
-Loops are moving development from a developer typing in a terminal to team-based workflows. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
+Loops are moving development from a developer typing in a terminal to team-based workflows. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a [software factory](#software-factory) is for agentic transformation.
 
 ## Concepts
 
@@ -75,4 +75,4 @@ A loop is nothing but an automation, triggered by an event, that runs a sequence
 
 ### Software Factory
 
-The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
+The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
