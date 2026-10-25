@@ -47,9 +47,9 @@ Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involv
 
 ### Infrastructure for Running Loops
 
-A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running loops. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
+A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
 
-Loops are moving development from a developer typing in a terminal to team-based workflows. The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
+Loops are moving development from a developer typing in a terminal to team-based workflows. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
 
 ## Concepts
 
@@ -63,6 +63,14 @@ Reference: [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-enginee
 
 **Conductor:** You work hands-on with an agent in a chat-based interface and stay in the loop: asking questions about the codebase, brainstorming ideas to decide what to build, and authoring the spec. This is where human involvement is most needed.
 
-**Orchestrator:** Once there is a good specification, the spec is handed over to an [implementation loop](#infrastructure-for-running-loops), and you no longer have to stay in the inner loop. You manage the outer loop and step in for anything that needs human input, preferably high-impact decisions, not just to monitor the spec's implementation.
+**Orchestrator:** Once there is a good specification, the spec is handed over to an [implementation loop](#loops), and you no longer have to stay in the inner loop. You manage the outer loop and step in for anything that needs human input, preferably high-impact decisions, not just to monitor the spec's implementation.
 
 Reference: [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
+
+### Loops
+
+A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
+
+### Software Factory
+
+The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
