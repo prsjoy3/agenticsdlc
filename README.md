@@ -61,6 +61,6 @@ Reference: [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-enginee
 
 **Conductor:** You work hands-on with an agent in a chat-based interface and stay in the loop: asking questions about the codebase, brainstorming ideas to decide what to build, and authoring the spec. This is where human involvement is most needed.
 
-**Orchestrator:** Once there is a good specification, you hand the work off to agents and no longer have to stay in the inner loop. You manage the outer loop: reviewing what the agents produce against the acceptance criteria and deciding what comes next.
+**Orchestrator:** Once there is a good specification, the spec is handed over to an [implementation loop](#infrastructure-for-running-loops), and you no longer have to stay in the inner loop. You manage the outer loop and step in for anything that needs human input, preferably high-impact decisions, not just to monitor the spec's implementation.
 
 Reference: [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
