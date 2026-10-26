@@ -1,4 +1,32 @@
 title: Agentic SDLC
-theme: jekyll-theme-cayman
+description: A guide on adopting agentic AI in the software development lifecycle (SDLC).
+remote_theme: just-the-docs/just-the-docs@v0.12.0
 url: https://prsjoy3.github.io
 baseurl: /agenticsdlc
+
+# Pages compresses Sass in production. This theme's head-nav stylesheet keeps
+# only the last lines of expanded CSS, so compression publishes an empty file.
+sass:
+  style: expanded
+
+# jekyll-build-pages uses the github-pages gem. These plugins are on its allowlist.
+# jekyll-remote-theme loads the theme; Just the Docs calls include_cached and seo.
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  GitHub: https://github.com/prsjoy3/agenticsdlc
+aux_links_new_tab: true
+
+# Scope this to README.md. A site-wide layout default also wraps theme
+# assets that use front matter for Liquid (notably just-the-docs-head-nav.css).
+defaults:
+  - scope:
+      path: "README.md"
+    values:
+      layout: default

@@ -1,0 +1,6 @@
+// Nested lists should not inherit the block margins used by top-level lists.
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-top: 0;
+}
