@@ -42,6 +42,8 @@ A [software factory](#software-factory) is harnessing [loops](#loops) at scale. 
 
 Currently, the default mode in most places is to stay in the loop and prompt agents every step of the way. A person with a great software engineering fundamentals can be highly productive with this approach. There are alternatives to consider to structure and scale this process, in most cases this is not a single person activity in a larger enterprise. This is where Spec-driven Development as a methodology can be considered, and an essential way to get better benefits from software factory.
 
+Spec-driven development can also be adopted independently using local coding agents; [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) has a good overview. Just using specs as a way to kick-start your implementation, instead of turn-by-turn prompting, is in itself a good skill to get used to. It is unclear at this time whether keeping the spec as the source of truth and keeping drift in check is essential.
+
 At a minimum, a specification should contain:
 
 - Intent
@@ -88,6 +90,7 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 
 - [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Software Factories](#software-factories)
 - [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Spec-Driven Development](#spec-driven-development)
+- [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) — cited in [Spec-Driven Development](#spec-driven-development)
 - [Lean](https://lean-lang.org/) — cited in [Verification and Proofing](#verification-and-proofing)
 - [Learn TLA+](https://learntla.com/) — cited in [Verification and Proofing](#verification-and-proofing)
 - [DORA Research](https://dora.dev/research/?view=detail) — cited in [Software Delivery Performance](#software-delivery-performance)
