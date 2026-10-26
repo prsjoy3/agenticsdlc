@@ -1,8 +1,14 @@
 title: Agentic SDLC
 description: A guide on adopting agentic AI in the software development lifecycle (SDLC).
 remote_theme: just-the-docs/just-the-docs@v0.12.0
-url: https://prsjoy3.github.io
-baseurl: /agenticsdlc
+url: "https://pathtoaisdlc.net"
+baseurl: ""
+
+# The github-pages gem drops CNAME from the build unless it is listed here.
+# actions/jekyll-build-pages publishes only the destination, so the file has
+# to be copied for the apex domain to be part of the Pages artifact.
+include:
+  - CNAME
 
 # Pages compresses Sass in production. This theme's head-nav stylesheet keeps
 # only the last lines of expanded CSS, so compression publishes an empty file.
