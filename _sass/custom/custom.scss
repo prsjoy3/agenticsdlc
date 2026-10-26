@@ -4,3 +4,64 @@ li > ol {
   margin-bottom: 0;
   margin-top: 0;
 }
+
+// No sidebar on any viewport. nav_enabled: false omits the markup; these
+// rules also clear the nav gutter and the mobile menu button if it is present.
+.side-bar,
+#menu-button {
+  display: none !important;
+}
+
+.side-bar + .main,
+.main {
+  width: 100%;
+  max-width: 62.5rem; // 1000px reading column, centered
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// The theme hides this bar on small screens when a sidebar exists.
+.side-bar + .main .main-header,
+.main-header {
+  display: flex;
+  align-items: stretch;
+  height: $header-height;
+}
+
+.main-header > .site-title {
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main-header > .search {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+}
+
+// Keep the search field in the bar at every width. Leave the active-search
+// overlay styles (fixed panel, shorter field) to the theme.
+html:not(.search-active) .main-header .search-input-wrap {
+  position: absolute;
+  width: 100%;
+  max-width: none;
+  height: 100% !important;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.main-header .search-results {
+  width: 100%;
+}
+
+// The theme prints its attribution in the sidebar on wide screens and again
+// in the footer below the md breakpoint. footer_custom.html shows it once,
+// under the content, so hide that second copy.
+.main-content > footer > .d-md-none {
+  display: none !important;
+}

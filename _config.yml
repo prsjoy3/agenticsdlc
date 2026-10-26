@@ -19,6 +19,10 @@ plugins:
 search_enabled: true
 heading_anchors: true
 
+# Omit the navigation sidebar on every page (including the mobile menu).
+# The site title is rendered in the header instead.
+nav_enabled: false
+
 aux_links:
   GitHub: https://github.com/prsjoy3/agenticsdlc
 aux_links_new_tab: true
