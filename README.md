@@ -17,15 +17,11 @@ _Things are rapidly evolving; this is current as of October 2026._
 
 ## Current State: How AI Is Changing Software Development
 
-With the advent of AI, typing code is no longer the bottleneck. It started with code completion, then to an AI assistant sitting with a classic IDE, to chat-based agent-first interfaces. As this progression was happening, LLMs have gotten so much better at understanding larger instructions.
+With the advent of AI, typing code is no longer the bottleneck. It started with code completion, then to an AI assistant bundled within a classic IDE. It then shifted towards coding agents and agent-first interfaces. As this progression was happening, LLMs have gotten so much better at following larger instructions, gotten really good at writing code and tool calling, harnesses have gotten better as well. 
 
-This is a huge shift since the advent of higher-level programming languages: now we have non-deterministic compilers in LLMs.
+This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](#durable-decisions), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
-Software engineers can now focus solely on [durable decisions](#durable-decisions), like architecture, API design, and the domain model: the things that are strategic.
-
-While chat-based interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop.
-
-Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
+While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
 ## From Agents to Loops
 Currently, the majority are in [conductor](#conductor-vs-orchestrator) mode for all types of tasks. In some cases, humans are just doing tasks like giving their coding agent the ticket ID. These things can be automated, and this is where [loops](#loops) come in to address the gap. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal.
