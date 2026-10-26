@@ -6,11 +6,11 @@ _Things are rapidly evolving; this is current as of October 2026._
 
 ## Contents
 
-- [How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
-- [Loops](#from-agents-to-loops)
-- [Software Factories](#software-factories)
+- [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Spec-Driven Development](#spec-driven-development)
 - [Verification and Proofing](#verification-and-proofing)
+- [Loops](#loops)
+- [Software Factories](#software-factories)
 - [Software Delivery Performance](#software-delivery-performance)
 - [Glossary](#glossary)
 - [References](#references)
@@ -22,21 +22,6 @@ With the advent of AI, typing code is no longer the bottleneck. It started with 
 This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](#durable-decisions), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
-
-## Loops
-Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
- 
-You can create loops for many things, for example:
-- Loops to create a spec from an idea
-- Loops to implement from the spec
-- Loops to do PR review and fix
-- Loops that automatically triage issues
-
-Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#software-factory) come in, to harness loops at scale. 
-
-## Software Factories
-
-A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
 ## Spec-Driven Development
 
@@ -62,6 +47,21 @@ Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/
 The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](#durable-decisions) and proofs more than code diffs.
 
 Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
+
+## Loops
+Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
+ 
+You can create loops for many things, for example:
+- Loops to create a spec from an idea
+- Loops to implement from the spec
+- Loops to do PR review and fix
+- Loops that automatically triage issues
+
+Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#software-factory) come in, to harness loops at scale. 
+
+## Software Factories
+
+A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
 ## Software Delivery Performance
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
