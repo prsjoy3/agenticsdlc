@@ -46,6 +46,9 @@
     var activeId = null;
     var pinnedId = null;
     var pinTimer = 0;
+    // Keep a URL hash highlighted until the reader scrolls by hand. After that,
+    // the reading line decides, including near the end of the page.
+    var stickToHash = true;
 
     function setExpanded(open) {
       if (!toggle || !nested) return;
@@ -98,6 +101,11 @@
       window.clearTimeout(pinTimer);
     }
 
+    function releaseToScrollspy() {
+      stickToHash = false;
+      clearPin();
+    }
+
     links.forEach(function (link, id) {
       link.addEventListener("click", function (event) {
         if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -112,12 +120,28 @@
       return top > -HASH_BAND_ABOVE && top < HASH_BAND_BELOW;
     }
 
+    // Headings near the end of the page never reach the top reading line,
+    // because there is not enough content below them. Slide the line downward
+    // over the last stretch of scroll so those sections can still become current.
+    function activationLine() {
+      var doc = document.scrollingElement || document.documentElement;
+      var maxScroll = doc.scrollHeight - window.innerHeight;
+      if (maxScroll <= 0) return READING_LINE;
+      var remaining = maxScroll - window.scrollY;
+      var range = Math.min(420, maxScroll);
+      if (remaining >= range) return READING_LINE;
+      var progress = 1 - remaining / range;
+      var deep = Math.min(window.innerHeight * 0.85, 760);
+      return READING_LINE + (deep - READING_LINE) * progress;
+    }
+
     function sectionAtLine() {
+      var line = activationLine();
       var current = null;
       var firstOnScreen = null;
       for (var n = 0; n < flat.length; n++) {
         var top = flat[n].getBoundingClientRect().top;
-        if (top <= READING_LINE) current = flat[n].id;
+        if (top <= line) current = flat[n].id;
         else if (!firstOnScreen && top < window.innerHeight) firstOnScreen = flat[n].id;
       }
       return current || firstOnScreen;
@@ -137,7 +161,7 @@
       }
 
       var hashed = hashId();
-      if (hashed && links.has(hashed) && headingNearTop(hashed)) {
+      if (stickToHash && hashed && links.has(hashed) && headingNearTop(hashed)) {
         setActive(hashed);
         return;
       }
@@ -174,21 +198,23 @@
     window.addEventListener("hashchange", function () {
       var id = hashId();
       if (pinnedId && id && id !== pinnedId) clearPin();
+      stickToHash = true;
       sync();
     });
     window.addEventListener("popstate", function () {
       clearPin();
+      stickToHash = true;
       sync();
     });
     window.addEventListener("wheel", function (event) {
       if (event.target && event.target.closest && event.target.closest(".toc-sidebar")) return;
-      clearPin();
+      releaseToScrollspy();
     }, { passive: true });
-    window.addEventListener("touchmove", clearPin, { passive: true });
+    window.addEventListener("touchmove", releaseToScrollspy, { passive: true });
     window.addEventListener("keydown", function (event) {
       if (event.key === "ArrowDown" || event.key === "ArrowUp" || event.key === "PageDown" ||
           event.key === "PageUp" || event.key === "Home" || event.key === "End" || event.key === " ") {
-        clearPin();
+        releaseToScrollspy();
       }
     });
     window.addEventListener("load", sync);
