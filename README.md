@@ -7,9 +7,10 @@ _Things are rapidly evolving; this is current as of October 2026._
 ## Contents
 
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
-- [Building on DevOps](#building-on-devops)
+- [Software Factories](#software-factories)
   - [Specs for Building New Features](#specs-for-building-new-features)
   - [Infrastructure for Running Loops](#infrastructure-for-running-loops)
+  - [Examples of Loops](#examples-of-loops)
 - [Concepts](#concepts)
 
 ## Current State: How AI Is Changing Software Development
@@ -26,7 +27,7 @@ While chat-based interfaces are great for certain aspects of software developmen
 
 Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
-## Building on DevOps
+## Software Factories
 
 One of the things the DevOps movement taught us in the past is to look at it as capabilities instead of a maturity model. DevOps transformation also taught us that it is not just tools and technologies that bring about change; process and people are also significantly important ([Accelerate](https://itrevolution.com/product/accelerate/), [State of DevOps report](https://dora.dev/research/)). DevOps as a whole culture is still the foundation to get meaningful impact in the agentic era as well.
 
@@ -52,6 +53,14 @@ A key infrastructure capability needed is for coding agents to run on a remote m
 Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a [software factory](#software-factory) is for agentic transformation.
 
 All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
+
+### Examples of Loops
+
+Examples of various [loops](#loops):
+- Loops to create a spec from an idea
+- Loops to implement from the spec
+- Loops to do PR review and fix
+- Loops that automatically triage issues
 
 ## Concepts
 
