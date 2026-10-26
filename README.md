@@ -42,9 +42,9 @@ Since you can create loops for many things, it is even better to have a system i
 
 A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that allows the creation of loops, provides observability, and allows humans to make decisions at the necessary places. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
-A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
+A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). Humans are still in the loop for any [durable decisions](#durable-decisions).
 
-Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a [software factory](#software-factory) is for agentic transformation.
+Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
 
 All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
 
