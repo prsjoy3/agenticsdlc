@@ -78,3 +78,7 @@ A loop is nothing but an automation, triggered by an event, that runs a sequence
 ### Software Factory
 
 The ecosystem of loops forms a software factory. In essence, a software factory is a system in itself that allows the creation of [loops](#loops), provides observability, and allows humans to make decisions at the necessary places. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
+
+While there is no common definition for this modern software factory, this definition sums it up well: a software factory is harnessing loops at scale.
+
+Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/)
