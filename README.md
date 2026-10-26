@@ -24,7 +24,7 @@ This is a huge shift since the advent of higher-level programming languages, now
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
 ## From Agents to Loops
-Currently, the majority are in [conductor](#conductor-vs-orchestrator) mode for all types of tasks. In some cases, humans are just doing tasks like giving their coding agent the ticket ID. These things can be automated, and this is where [loops](#loops) come in to address the gap. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal.
+Currently, the default mode is to stay in the loop and prompt agents every step of the way. In some cases, humans are just doing tasks like giving their coding agent the ticket ID to start the work and steering it along the way. These things can be automated, and this is where [loops](#loops) come in to address the gap. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Loops are multi-agent workflows that also supports human approval or decision making as needed for that workflow, and it is running in cloud, not in the developer's machine. Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do.
 
 You can create loops for many things, for example:
 - Loops to create a spec from an idea
@@ -32,7 +32,7 @@ You can create loops for many things, for example:
 - Loops to do PR review and fix
 - Loops that automatically triage issues
 
-Since you can create loops for many things, it is even better to have a system in place to manage them in a consistent way. This is where [software factories](#software-factory) come in, to harness loops at scale. The key thing here is that coding agents are no longer running on a developer's local machine.
+Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#software-factory) come in, to harness loops at scale. 
 
 ## Software Factories
 
@@ -40,7 +40,7 @@ A [software factory](#software-factory) is harnessing [loops](#loops) at scale. 
 
 A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). Humans are still in the loop for any [durable decisions](#durable-decisions).
 
-Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
+ The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.
 
 All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
 
