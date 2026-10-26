@@ -24,7 +24,7 @@ This is a huge shift since the advent of higher-level programming languages, now
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
 ## From Agents to Loops
-Currently, the default mode is to stay in the loop and prompt agents every step of the way. In some cases, humans are just doing tasks like giving their coding agent the ticket ID to start the work and steering it along the way. These things can be automated with agents. Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
+Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
  
 You can create loops for many things, for example:
 - Loops to create a spec from an idea
@@ -40,7 +40,7 @@ A [software factory](#software-factory) is harnessing [loops](#loops) at scale. 
 
 ## Spec-Driven Development
 
-In order to effectively use agents and optimize human time, it is important to write a good specification as the starting context.
+Currently, the default mode in most places is to stay in the loop and prompt agents every step of the way. A person with a great software engineering fundamentals can be highly productive with this approach. There are alternatives to consider to structure and scale this process, in most cases this is not a single person activity in a larger enterprise. This is where Spec-driven Development as a methodology can be considered, and an essential way to get better benefits from software factory.
 
 At a minimum, a specification should contain:
 
