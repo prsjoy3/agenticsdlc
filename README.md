@@ -7,7 +7,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 ## Contents
 
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
-- [From Conductor Mode to Loops](#from-conductor-mode-to-loops)
+- [From Agents to Loops](#from-agents-to-loops)
 - [Software Factories](#software-factories)
   - [Specs for Building New Features](#specs-for-building-new-features)
   - [Infrastructure for Running Loops](#infrastructure-for-running-loops)
@@ -27,7 +27,7 @@ While chat-based interfaces are great for certain aspects of software developmen
 
 Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
-## From Conductor Mode to Loops
+## From Agents to Loops
 Currently, the majority are in [conductor](#conductor-vs-orchestrator) mode for all types of tasks. In some cases, humans are just doing tasks like giving their coding agent the ticket ID. These things can be automated, and this is where [loops](#loops) come in to address the gap. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal.
 
 You can create loops for many things, for example:
