@@ -24,8 +24,8 @@ This is a huge shift since the advent of higher-level programming languages, now
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](#conductor-vs-orchestrator).
 
 ## From Agents to Loops
-Currently, the default mode is to stay in the loop and prompt agents every step of the way. In some cases, humans are just doing tasks like giving their coding agent the ticket ID to start the work and steering it along the way. These things can be automated, and this is where [loops](#loops) come in to address the gap. A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Loops are multi-agent workflows that also supports human approval or decision making for any [durable decisions](#durable-decisions) as needed for that workflow, and it is running in cloud, not in the developer's machine. Loops are moving development from a developer prompting at their coding agent to team-based workflows. Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward specifications, [durable decisions](#durable-decisions) 
-
+Currently, the default mode is to stay in the loop and prompt agents every step of the way. In some cases, humans are just doing tasks like giving their coding agent the ticket ID to start the work and steering it along the way. These things can be automated with agents. Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
+ 
 You can create loops for many things, for example:
 - Loops to create a spec from an idea
 - Loops to implement from the spec
@@ -36,11 +36,7 @@ Since you can create loops for many things, it is important to have a system in 
 
 ## Software Factories
 
-A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era.What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
-
-
-
-All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
+A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
 ## Spec-Driven Development
 
@@ -54,8 +50,6 @@ At a minimum, a specification should contain:
 - Any other additional context
 
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
-
-Use [conductor](#conductor-vs-orchestrator) mode to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a [conductor](#conductor-vs-orchestrator) and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the [outer loop](#loops).
 
 ## Verification and Proofing
 
