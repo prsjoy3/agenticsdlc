@@ -9,7 +9,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
 - [From Agents to Loops](#from-agents-to-loops)
 - [Software Factories](#software-factories)
-- [Specs for Building New Features](#specs-for-building-new-features)
+- [Spec-Driven Development](#spec-driven-development)
 - [Software Delivery Performance](#software-delivery-performance)
 - [Glossary](#glossary)
 
@@ -48,7 +48,7 @@ Loops are moving development from a developer typing in a terminal to team-based
 
 All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
 
-## Specs for Building New Features
+## Spec-Driven Development
 
 In order to effectively use agents and optimize human time, it is important to write a good specification as the starting context.
 
@@ -61,7 +61,7 @@ At a minimum, a specification should contain:
 
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
 
-Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a conductor and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the outer loop.
+Use [conductor](#conductor-vs-orchestrator) mode to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a [conductor](#conductor-vs-orchestrator) and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the [outer loop](#loops).
 
 ## Software Delivery Performance
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
