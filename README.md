@@ -72,16 +72,6 @@ Architecture, API design, and the domain model: the things that are strategic.
 
 Reference: [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/)
 
-### Conductor vs. Orchestrator
-
-As a conductor, the person is in the loop; as an orchestrator, the person is outside the loop, managing the [loop](#loops).
-
-**Conductor:** You work hands-on with an agent in a chat-based interface and stay in the loop: asking questions about the codebase, brainstorming ideas to decide what to build, and authoring the spec. This is where human involvement is most needed.
-
-**Orchestrator:** Once there is a good specification, the spec is handed over to an [implementation loop](#loops), and you no longer have to stay in the inner loop. You manage the outer loop and step in for anything that needs human input, preferably high-impact decisions, not just to monitor the spec's implementation.
-
-Reference: [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding)
-
 ### Loops
 
 A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
