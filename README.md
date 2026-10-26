@@ -13,6 +13,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [Verification and Proofing](#verification-and-proofing)
 - [Software Delivery Performance](#software-delivery-performance)
 - [Glossary](#glossary)
+- [References](#references)
 
 ## Current State: How AI Is Changing Software Development
 
@@ -104,3 +105,12 @@ The ecosystem of loops forms a software factory. In essence, a software factory 
 While there is no common definition for this modern software factory, this definition sums it up well: a software factory is harnessing loops at scale.
 
 Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/)
+
+## References
+
+- [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Software Factories](#software-factories)
+- [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Spec-Driven Development](#spec-driven-development)
+- [DORA Research](https://dora.dev/research/?view=detail) — cited in [Software Delivery Performance](#software-delivery-performance)
+- [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [Durable Decisions](#durable-decisions)
+- [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [Conductor vs. Orchestrator](#conductor-vs-orchestrator)
+- [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Software Factory](#software-factory)
