@@ -11,7 +11,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [Software Factories](#software-factories)
 - [Specs for Building New Features](#specs-for-building-new-features)
 - [Software Delivery Performance](#software-delivery-performance)
-- [Concepts](#concepts)
+- [Glossary](#glossary)
 
 ## Current State: How AI Is Changing Software Development
 
@@ -66,7 +66,7 @@ Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involv
 ## Software Delivery Performance
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
 
-## Concepts
+## Glossary
 
 ### Durable Decisions
 
