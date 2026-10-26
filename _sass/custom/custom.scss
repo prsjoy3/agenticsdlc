@@ -5,17 +5,23 @@ li > ol {
   margin-top: 0;
 }
 
-// No sidebar on any viewport. nav_enabled: false omits the markup; these
+// The theme page nav stays off. nav_enabled: false omits its markup; these
 // rules also clear the nav gutter and the mobile menu button if it is present.
+// The heading list below is a separate sidebar.
 .side-bar,
 #menu-button {
   display: none !important;
 }
 
+$reading-column: 62.5rem; // 1000px reading column
+$toc-width: $nav-width-md; // 15.5rem, inside the 220–260px range
+$toc-gap: $gutter-spacing;
+$toc-breakpoint: 1000px;
+
 .side-bar + .main,
 .main {
   width: 100%;
-  max-width: 62.5rem; // 1000px reading column, centered
+  max-width: $reading-column;
   margin-right: auto;
   margin-left: auto;
 }
@@ -64,4 +70,186 @@ html:not(.search-active) .main-header .search-input-wrap {
 // under the content, so hide that second copy.
 .main-content > footer > .d-md-none {
   display: none !important;
+}
+
+// Heading targets sit a little below the viewport edge. The scrollspy reading
+// line in assets/js/toc-scrollspy.js is below this offset.
+.main-content h2,
+.main-content h3 {
+  scroll-margin-top: $sp-5;
+}
+
+// In-page heading list. Hidden below $toc-breakpoint so the reading column
+// keeps its current centered layout. From that width up, the list and the
+// article share one centered group — the list is not pinned to the viewport
+// edge, which would leave an empty gutter beside a narrow column.
+.toc-sidebar {
+  display: none;
+}
+
+@media (min-width: $toc-breakpoint) {
+  .main {
+    max-width: $reading-column + $toc-width + $toc-gap;
+  }
+
+  .toc-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: $toc-gap;
+  }
+
+  .toc-layout > .main-content {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .toc-sidebar {
+    display: block;
+    position: sticky;
+    top: $sp-4;
+    flex: 0 0 $toc-width;
+    width: $toc-width;
+    max-height: calc(100vh - #{$sp-8});
+    margin: 0;
+    padding: $sp-1 0 $sp-4;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-right: $border $border-color;
+    scrollbar-width: thin;
+    scrollbar-color: $grey-lt-300 transparent;
+  }
+}
+
+.toc-sidebar-label {
+  margin: 0;
+  padding: 0 $sp-2 $sp-2 calc(#{$sp-3} + 2px);
+  font-size: $font-size-3;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $grey-dk-100;
+}
+
+.toc-sidebar-list,
+.toc-sidebar-nested {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc-sidebar-item {
+  margin: 0;
+}
+
+.toc-sidebar-row {
+  display: flex;
+  align-items: center;
+}
+
+.toc-sidebar-link {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: $sp-1 $sp-2 $sp-1 $sp-3;
+  border-left: 2px solid transparent;
+  border-radius: 0 $border-radius $border-radius 0;
+  font-size: $font-size-4;
+  font-weight: 400;
+  line-height: 1.35;
+  color: $grey-dk-200;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: -2px;
+  }
+
+  &.is-active {
+    font-weight: 700;
+    color: $link-color;
+    border-left-color: $link-color;
+    background-color: rgba($purple-000, 0.08);
+  }
+}
+
+.toc-sidebar-nested {
+  padding: 0 0 $sp-1 $sp-3;
+
+  .toc-sidebar-link {
+    font-size: $font-size-3;
+    color: $grey-dk-100;
+
+    &.is-active {
+      color: $link-color;
+    }
+  }
+}
+
+.toc-sidebar-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: $sp-6;
+  height: $sp-6;
+  margin: 0 $sp-1 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: $border-radius;
+  background: transparent;
+  color: $grey-dk-100;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: $link-color;
+    background-color: $grey-lt-000;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: -2px;
+  }
+}
+
+.toc-sidebar-chevron {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.toc-sidebar-toggle[aria-expanded="true"] .toc-sidebar-chevron {
+  transform: rotate(135deg);
+}
+
+@media (forced-colors: active) {
+  .toc-sidebar-link.is-active {
+    border-left-color: Highlight;
+    color: Highlight;
+    background: transparent;
+  }
+}
+
+@media print {
+  .toc-sidebar {
+    display: none !important;
+  }
+
+  .main {
+    max-width: $reading-column;
+  }
+
+  .toc-layout {
+    display: block;
+  }
 }
