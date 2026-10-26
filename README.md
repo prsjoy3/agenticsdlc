@@ -9,8 +9,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
 - [From Agents to Loops](#from-agents-to-loops)
 - [Software Factories](#software-factories)
-  - [Specs for Building New Features](#specs-for-building-new-features)
-  - [Infrastructure for Running Loops](#infrastructure-for-running-loops)
+- [Specs for Building New Features](#specs-for-building-new-features)
 - [Software Delivery Performance](#software-delivery-performance)
 - [Concepts](#concepts)
 
@@ -43,11 +42,17 @@ Since you can create loops for many things, it is even better to have a system i
 
 A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that allows the creation of loops, provides observability, and allows humans to make decisions at the necessary places. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
-A software factory needs the following capabilities.
+A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
 
-### Specs for Building New Features
+Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a [software factory](#software-factory) is for agentic transformation.
 
-The first capability is specs for building new features. At a minimum, a specification should contain:
+All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
+
+## Specs for Building New Features
+
+In order to effectively use agents and optimize human time, it is important to write a good specification as the starting context.
+
+At a minimum, a specification should contain:
 
 - Intent
 - Requirements
@@ -57,14 +62,6 @@ The first capability is specs for building new features. At a minimum, a specifi
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
 
 Use [conductor mode](#conductor-vs-orchestrator) to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a conductor and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the outer loop.
-
-### Infrastructure for Running Loops
-
-A key infrastructure capability needed is for coding agents to run on a remote machine rather than on a developer's machine. This is a key requirement for running [loops](#loops). A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
-
-Loops are moving development from a developer typing in a terminal to team-based workflows. Wherever human attention was needed in traditional CI/CD, it can now be delegated to loops, and human attention is directed toward tasks that agents are not good at or cannot do. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a [software factory](#software-factory) is for agentic transformation.
-
-All of a sudden, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team.
 
 ## Software Delivery Performance
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
