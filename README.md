@@ -67,6 +67,8 @@ Use [conductor](#conductor-vs-orchestrator) mode to arrive at this. Human involv
 
 Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks.
 
+Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/) and [TLA+](https://learntla.com/) to formally verify application logic.
+
 The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](#durable-decisions) and proofs more than code diffs.
 
 Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
@@ -108,6 +110,8 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 
 - [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Software Factories](#software-factories)
 - [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Spec-Driven Development](#spec-driven-development)
+- [Lean](https://lean-lang.org/) — cited in [Verification and Proofing](#verification-and-proofing)
+- [Learn TLA+](https://learntla.com/) — cited in [Verification and Proofing](#verification-and-proofing)
 - [DORA Research](https://dora.dev/research/?view=detail) — cited in [Software Delivery Performance](#software-delivery-performance)
 - [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [Durable Decisions](#durable-decisions)
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [Conductor vs. Orchestrator](#conductor-vs-orchestrator)
