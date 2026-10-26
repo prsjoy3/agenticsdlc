@@ -10,7 +10,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [From Agents to Loops](#from-agents-to-loops)
 - [Software Factories](#software-factories)
 - [Spec-Driven Development](#spec-driven-development)
-- [Verification and Review](#verification-and-review)
+- [Verification and Proofing](#verification-and-proofing)
 - [Software Delivery Performance](#software-delivery-performance)
 - [Glossary](#glossary)
 
@@ -64,7 +64,7 @@ For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contra
 
 Use [conductor](#conductor-vs-orchestrator) mode to arrive at this. Human involvement is most needed here; at this moment, full automation is not possible in this area. Be a [conductor](#conductor-vs-orchestrator) and author the spec, and then switch to being an [orchestrator](#conductor-vs-orchestrator) and manage the [outer loop](#loops).
 
-## Verification and Review
+## Verification and Proofing
 
 Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks.
 
