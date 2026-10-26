@@ -6,8 +6,8 @@ _Things are rapidly evolving; this is current as of October 2026._
 
 ## Contents
 
-- [Current State: How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
-- [From Agents to Loops](#from-agents-to-loops)
+- [How AI Is Changing Software Development](#current-state-how-ai-is-changing-software-development)
+- [Loops](#from-agents-to-loops)
 - [Software Factories](#software-factories)
 - [Spec-Driven Development](#spec-driven-development)
 - [Verification and Proofing](#verification-and-proofing)
