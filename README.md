@@ -11,8 +11,8 @@ _Things are rapidly evolving; this is current as of October 2026._
     - [Set Up Your Codebase for Agents](#set-up-your-codebase-for-agents)
     - [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
     - [Adopt Spec-Driven Development](#adopt-spec-driven-development)
-    - [Loops](#loops)
-    - [Software Factories](#software-factories)
+    - [Automate with Loops](#automate-with-loops)
+    - [Scale Loops with Software Factories](#scale-loops-with-software-factories)
 - [Conclusion](#conclusion)
 - [Glossary](#glossary)
 - [References](#references)
@@ -60,7 +60,7 @@ At a minimum, a specification should contain:
 
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
 
-### Loops
+### Automate with Loops
 Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
  
 You can create loops for many things, for example:
@@ -71,7 +71,7 @@ You can create loops for many things, for example:
 
 Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#software-factory) come in, to harness loops at scale. 
 
-### Software Factories
+### Scale Loops with Software Factories
 
 A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
@@ -100,7 +100,7 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 
 ## References
 
-- [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Software Factories](#software-factories)
+- [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Scale Loops with Software Factories](#scale-loops-with-software-factories)
 - [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Adopt Spec-Driven Development](#adopt-spec-driven-development)
 - [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) — cited in [Adopt Spec-Driven Development](#adopt-spec-driven-development)
 - [Lean](https://lean-lang.org/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
