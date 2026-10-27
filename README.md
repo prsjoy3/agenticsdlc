@@ -24,6 +24,8 @@ This is a huge shift since the advent of higher-level programming languages, now
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
 
+Below is a list of capabilities to progress in the adoption of the agentic SDLC. Each capability is complementary to the others, and the sequence below also serves as building blocks.
+
 ## Set Up Your Codebase for Agents
 
 Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
