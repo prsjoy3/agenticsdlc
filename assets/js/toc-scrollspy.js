@@ -35,11 +35,12 @@
       links.set(decodeHash(anchors[i].getAttribute("href")), anchors[i]);
     }
 
-    var toggle = nav.querySelector(".toc-sidebar-toggle");
-    var nested = nav.querySelector(".toc-sidebar-nested");
-    if (toggle && nested) {
-      toggle.addEventListener("click", function () {
-        setExpanded(toggle.getAttribute("aria-expanded") !== "true");
+    var toggles = nav.querySelectorAll(".toc-sidebar-toggle");
+    for (var t = 0; t < toggles.length; t++) {
+      toggles[t].addEventListener("click", function () {
+        var button = this;
+        var panel = document.getElementById(button.getAttribute("aria-controls"));
+        setExpanded(button, panel, button.getAttribute("aria-expanded") !== "true");
       });
     }
 
@@ -50,17 +51,28 @@
     // the reading line decides, including near the end of the page.
     var stickToHash = true;
 
-    function setExpanded(open) {
+    function setExpanded(toggle, nested, open) {
       if (!toggle || !nested) return;
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "Hide glossary entries" : "Show glossary entries");
+      toggle.setAttribute("aria-label", open ? toggle.getAttribute("data-label-hide") : toggle.getAttribute("data-label-show"));
       nested.hidden = !open;
+    }
+
+    // Highlight the subsection in view, and show which h2 it belongs to.
+    function indicateParent(link) {
+      var nested = link.closest(".toc-sidebar-nested");
+      if (!nested) return;
+      var item = nested.parentNode;
+      setExpanded(item.querySelector(".toc-sidebar-toggle"), nested, true);
+      var parentLink = item.querySelector(".toc-sidebar-row > .toc-sidebar-link");
+      if (parentLink) parentLink.classList.add("is-parent-active");
     }
 
     function setActive(id) {
       if (!links.has(id) || activeId === id) return;
       activeId = id;
       links.forEach(function (link, linkId) {
+        link.classList.remove("is-parent-active");
         if (linkId === id) {
           link.classList.add("is-active");
           link.setAttribute("aria-current", "location");
@@ -70,7 +82,7 @@
         }
       });
       var link = links.get(id);
-      if (link.closest(".toc-sidebar-nested")) setExpanded(true);
+      indicateParent(link);
       reveal(link);
     }
 
@@ -254,6 +266,14 @@
     return node.id === "glossary" || text.toLowerCase() === "glossary";
   }
 
+  function isCapabilities(node, text) {
+    return node.id === "capabilities" || text.toLowerCase() === "capabilities";
+  }
+
+  function nestsChildren(node, text) {
+    return isCapabilities(node, text) || isGlossary(node, text);
+  }
+
   function buildTree(nodes) {
     var items = [];
     var current = null;
@@ -272,10 +292,13 @@
           text: text,
           el: node,
           glossary: isGlossary(node, text),
+          // Capabilities stays open; Glossary stays collapsed until opened.
+          expanded: isCapabilities(node, text),
+          nest: nestsChildren(node, text),
           children: []
         };
         items.push(current);
-      } else if (current && current.glossary) {
+      } else if (current && current.nest) {
         current.children.push({ id: node.id, text: text, el: node });
       }
     }
@@ -312,6 +335,14 @@
     return nav;
   }
 
+  function toggleLabels(item) {
+    var what = item.glossary ? "glossary entries" : "capability entries";
+    return {
+      show: "Show " + what,
+      hide: "Hide " + what
+    };
+  }
+
   function renderItem(item) {
     var li = document.createElement("li");
     li.className = "toc-sidebar-item";
@@ -320,6 +351,10 @@
       return li;
     }
 
+    var labels = toggleLabels(item);
+    var open = !!item.expanded;
+    var controlsId = "toc-" + item.id + "-entries";
+
     var row = document.createElement("div");
     row.className = "toc-sidebar-row";
     row.appendChild(makeLink(item));
@@ -327,9 +362,11 @@
     var button = document.createElement("button");
     button.type = "button";
     button.className = "toc-sidebar-toggle";
-    button.setAttribute("aria-expanded", "false");
-    button.setAttribute("aria-controls", "toc-glossary-entries");
-    button.setAttribute("aria-label", "Show glossary entries");
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+    button.setAttribute("aria-controls", controlsId);
+    button.setAttribute("data-label-show", labels.show);
+    button.setAttribute("data-label-hide", labels.hide);
+    button.setAttribute("aria-label", open ? labels.hide : labels.show);
     var chevron = document.createElement("span");
     chevron.className = "toc-sidebar-chevron";
     chevron.setAttribute("aria-hidden", "true");
@@ -339,8 +376,8 @@
 
     var nested = document.createElement("ul");
     nested.className = "toc-sidebar-nested";
-    nested.id = "toc-glossary-entries";
-    nested.hidden = true;
+    nested.id = controlsId;
+    nested.hidden = !open;
     item.children.forEach(function (child) {
       var childLi = document.createElement("li");
       childLi.className = "toc-sidebar-item";
