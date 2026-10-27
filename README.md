@@ -25,11 +25,11 @@ This is a huge shift since the advent of higher-level programming languages, now
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
 
+One of the key lessons we learned from the DevOps transformation is to look at these as capabilities rather than as a maturity model, since a maturity model may give a false notion that we have arrived. It is important to follow a continuous improvement mindset, even more so in this agentic transformation era.
+
 ## Capabilities
 
 Below is a list of capabilities to progress in the adoption of the agentic SDLC. Each capability is complementary to the others, and the sequence below also serves as building blocks.
-
-One of the key lessons we learned from the DevOps transformation is to look at these as capabilities rather than as a maturity model, since a maturity model may give a false notion that we have arrived. It is important to follow a continuous improvement mindset, even more so in this agentic transformation era.
 
 ### Set Up Your Codebase for Agents
 
