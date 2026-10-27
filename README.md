@@ -29,7 +29,7 @@ One of the key lessons we learned from the DevOps transformation is to look at t
 
 ## Capabilities
 
-Below is a list of capabilities to progress in the adoption of the agentic SDLC. Each capability is complementary to the others, and the sequence below also serves as building blocks.
+Below is a list of capabilities to progress in the adoption of the agentic SDLC. Each capability is complementary to the others, and the sequence below also serves as building blocks. In essence, these capabilities maximize the ways for humans to stay in the outer loop and be an orchestrator, rather than being a conductor who stays in the inner loop.
 
 ### Set Up Your Codebase for Agents
 
