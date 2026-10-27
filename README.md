@@ -9,7 +9,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Capabilities](#capabilities)
     - [Set Up Your Codebase for Agents](#set-up-your-codebase-for-agents)
-    - [Verification and Proofing](#verification-and-proofing)
+    - [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
     - [Spec-Driven Development](#spec-driven-development)
     - [Loops](#loops)
     - [Software Factories](#software-factories)
@@ -35,7 +35,7 @@ Below is a list of capabilities to progress in the adoption of the agentic SDLC.
 
 Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
 
-### Verification and Proofing
+### Give Agents a Way to Verify Its Work
 
 Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks. It is important to give agents a fast feedback loop so that they can run tests locally and self-correct before you ever look at the code; otherwise, you're the bottleneck.
 
@@ -103,8 +103,8 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 - [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Software Factories](#software-factories)
 - [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Spec-Driven Development](#spec-driven-development)
 - [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) — cited in [Spec-Driven Development](#spec-driven-development)
-- [Lean](https://lean-lang.org/) — cited in [Verification and Proofing](#verification-and-proofing)
-- [Learn TLA+](https://learntla.com/) — cited in [Verification and Proofing](#verification-and-proofing)
+- [Lean](https://lean-lang.org/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
+- [Learn TLA+](https://learntla.com/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [DORA Research](https://dora.dev/research/?view=detail) — cited in [Conclusion](#conclusion)
 - [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [Durable Decisions](#durable-decisions)
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
