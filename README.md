@@ -10,7 +10,7 @@ _Things are rapidly evolving; this is current as of October 2026._
 - [Capabilities](#capabilities)
     - [Set Up Your Codebase for Agents](#set-up-your-codebase-for-agents)
     - [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
-    - [Spec-Driven Development](#spec-driven-development)
+    - [Adopt Spec-Driven Development](#adopt-spec-driven-development)
     - [Loops](#loops)
     - [Software Factories](#software-factories)
 - [Conclusion](#conclusion)
@@ -45,7 +45,7 @@ The coding agent should also attach proofs of its verification on a pull request
 
 Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
 
-### Spec-Driven Development
+### Adopt Spec-Driven Development
 
 Currently, the default mode in most places is to stay in the loop and prompt agents every step of the way. A person with a great software engineering fundamentals can be highly productive with this approach. There are alternatives to consider to structure and scale this process, in most cases this is not a single person activity in a larger enterprise. This is where Spec-driven Development as a methodology can be considered, and an essential way to get better benefits from software factory.
 
@@ -101,8 +101,8 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 ## References
 
 - [Factory concepts and practices in software development : an historical overview](http://hdl.handle.net/1721.1/47992) — cited in [Software Factories](#software-factories)
-- [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Spec-Driven Development](#spec-driven-development)
-- [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) — cited in [Spec-Driven Development](#spec-driven-development)
+- [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/) — cited in [Adopt Spec-Driven Development](#adopt-spec-driven-development)
+- [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) — cited in [Adopt Spec-Driven Development](#adopt-spec-driven-development)
 - [Lean](https://lean-lang.org/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [Learn TLA+](https://learntla.com/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [DORA Research](https://dora.dev/research/?view=detail) — cited in [Conclusion](#conclusion)
