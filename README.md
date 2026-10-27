@@ -30,7 +30,7 @@ Ensure linting and styling tools are set up for the codebase, preferably as a sc
 
 ## Verification and Proofing
 
-Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks.
+Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks. It is important to give agents a fast feedback loop so that they can run tests locally and self-correct before you ever look at the code; otherwise, you're the bottleneck.
 
 Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/) and [TLA+](https://learntla.com/) to formally verify application logic.
 
