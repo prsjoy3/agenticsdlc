@@ -7,8 +7,9 @@ _Things are rapidly evolving; this is current as of October 2026._
 ## Contents
 
 - [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
-- [Spec-Driven Development](#spec-driven-development)
+- [Set Up Your Codebase for Agents](#set-up-your-codebase-for-agents)
 - [Verification and Proofing](#verification-and-proofing)
+- [Spec-Driven Development](#spec-driven-development)
 - [Loops](#loops)
 - [Software Factories](#software-factories)
 - [Software Delivery Performance](#software-delivery-performance)
@@ -22,6 +23,20 @@ With the advent of AI, typing code is no longer the bottleneck. It started with 
 This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](#durable-decisions), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
+
+## Set Up Your Codebase for Agents
+
+Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
+
+## Verification and Proofing
+
+Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks.
+
+Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/) and [TLA+](https://learntla.com/) to formally verify application logic.
+
+The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](#durable-decisions) and proofs more than code diffs.
+
+Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
 
 ## Spec-Driven Development
 
@@ -37,16 +52,6 @@ At a minimum, a specification should contain:
 - Any other additional context
 
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
-
-## Verification and Proofing
-
-Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks.
-
-Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/) and [TLA+](https://learntla.com/) to formally verify application logic.
-
-The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](#durable-decisions) and proofs more than code diffs.
-
-Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
 
 ## Loops
 Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
