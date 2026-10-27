@@ -7,12 +7,13 @@ _Things are rapidly evolving; this is current as of October 2026._
 ## Contents
 
 - [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
-- [Set Up Your Codebase for Agents](#set-up-your-codebase-for-agents)
-- [Verification and Proofing](#verification-and-proofing)
-- [Spec-Driven Development](#spec-driven-development)
-- [Loops](#loops)
-- [Software Factories](#software-factories)
-- [Software Delivery Performance](#software-delivery-performance)
+- [Capabilities](#capabilities)
+    - [Set Up Your Codebase for Agents](#set-up-your-codebase-for-agents)
+    - [Verification and Proofing](#verification-and-proofing)
+    - [Spec-Driven Development](#spec-driven-development)
+    - [Loops](#loops)
+    - [Software Factories](#software-factories)
+- [Conclusion](#conclusion)
 - [Glossary](#glossary)
 - [References](#references)
 
@@ -24,13 +25,17 @@ This is a huge shift since the advent of higher-level programming languages, now
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
 
+## Capabilities
+
 Below is a list of capabilities to progress in the adoption of the agentic SDLC. Each capability is complementary to the others, and the sequence below also serves as building blocks.
 
-## Set Up Your Codebase for Agents
+One of the key lessons we learned from the DevOps transformation is to look at these as capabilities rather than as a maturity model, since a maturity model may give a false notion that we have arrived. It is important to follow a continuous improvement mindset, even more so in this agentic transformation era.
+
+### Set Up Your Codebase for Agents
 
 Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
 
-## Verification and Proofing
+### Verification and Proofing
 
 Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks. It is important to give agents a fast feedback loop so that they can run tests locally and self-correct before you ever look at the code; otherwise, you're the bottleneck.
 
@@ -40,7 +45,7 @@ The coding agent should also attach proofs of its verification on a pull request
 
 Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
 
-## Spec-Driven Development
+### Spec-Driven Development
 
 Currently, the default mode in most places is to stay in the loop and prompt agents every step of the way. A person with a great software engineering fundamentals can be highly productive with this approach. There are alternatives to consider to structure and scale this process, in most cases this is not a single person activity in a larger enterprise. This is where Spec-driven Development as a methodology can be considered, and an essential way to get better benefits from software factory.
 
@@ -55,7 +60,7 @@ At a minimum, a specification should contain:
 
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
 
-## Loops
+### Loops
 Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
  
 You can create loops for many things, for example:
@@ -66,11 +71,11 @@ You can create loops for many things, for example:
 
 Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#software-factory) come in, to harness loops at scale. 
 
-## Software Factories
+### Software Factories
 
 A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
 
-## Software Delivery Performance
+## Conclusion
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
 
 ## Glossary
@@ -100,7 +105,7 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 - [Martin Fowler: Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) — cited in [Spec-Driven Development](#spec-driven-development)
 - [Lean](https://lean-lang.org/) — cited in [Verification and Proofing](#verification-and-proofing)
 - [Learn TLA+](https://learntla.com/) — cited in [Verification and Proofing](#verification-and-proofing)
-- [DORA Research](https://dora.dev/research/?view=detail) — cited in [Software Delivery Performance](#software-delivery-performance)
+- [DORA Research](https://dora.dev/research/?view=detail) — cited in [Conclusion](#conclusion)
 - [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [Durable Decisions](#durable-decisions)
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Software Factory](#software-factory)

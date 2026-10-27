@@ -171,6 +171,12 @@ html:not(.search-active) .main-header .search-input-wrap {
     outline-offset: -2px;
   }
 
+  // The h2 that owns the subsection currently in view.
+  &.is-parent-active {
+    font-weight: 600;
+    color: $link-color;
+  }
+
   &.is-active {
     font-weight: 700;
     color: $link-color;
