@@ -14,14 +14,13 @@ _Things are rapidly evolving; this is current as of October 2026._
     - [Automate with Loops](#automate-with-loops)
     - [Scale Loops with Software Factories](#scale-loops-with-software-factories)
 - [Conclusion](#conclusion)
-- [Glossary](#glossary)
 - [References](#references)
 
 ## How AI Is Changing Software Development
 
 With the advent of AI, typing code is no longer the bottleneck. It started with code completion, then to an AI assistant bundled within a classic IDE. It then shifted towards coding agents and agent-first interfaces. As this progression was happening, LLMs have gotten so much better at following larger instructions, gotten really good at writing code and tool calling, harnesses have gotten better as well. 
 
-This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](#durable-decisions), like architecture, API design, and the domain model, etc the things that are strategic in nature.
+This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
 
@@ -37,13 +36,13 @@ Ensure linting and styling tools are set up for the codebase, preferably as a sc
 
 ### Give Agents a Way to Verify Its Work
 
-Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks. It is important to give agents a fast feedback loop so that they can run tests locally and self-correct before you ever look at the code; otherwise, you're the bottleneck.
+Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#automate-with-loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks. It is important to give agents a fast feedback loop so that they can run tests locally and self-correct before you ever look at the code; otherwise, you're the bottleneck.
 
 Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/) and [TLA+](https://learntla.com/) to formally verify application logic.
 
-The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](#durable-decisions) and proofs more than code diffs.
+The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](https://kiro.dev/topics/frontier-engineering/) and proofs more than code diffs.
 
-Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](#durable-decisions), and the code diff for any mission-critical PRs / codebases.
+Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](https://kiro.dev/topics/frontier-engineering/), and the code diff for any mission-critical PRs / codebases.
 
 ### Adopt Spec-Driven Development
 
@@ -61,7 +60,7 @@ At a minimum, a specification should contain:
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
 
 ### Automate with Loops
-Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](#durable-decisions) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
+Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](https://kiro.dev/topics/frontier-engineering/) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
  
 You can create loops for many things, for example:
 - Loops to create a spec from an idea
@@ -69,34 +68,14 @@ You can create loops for many things, for example:
 - Loops to do PR review and fix
 - Loops that automatically triage issues
 
-Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#software-factory) come in, to harness loops at scale. 
+Since you can create loops for many things, it is important to have a system in place to manage them at scale. This is where [software factories](#scale-loops-with-software-factories) come in, to harness loops at scale. 
 
 ### Scale Loops with Software Factories
 
-A [software factory](#software-factory) is harnessing [loops](#loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a [software factory](#software-factory). Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
+A software factory is harnessing [loops](#automate-with-loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation. See also [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/).
 
 ## Conclusion
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
-
-## Glossary
-
-### Durable Decisions
-
-Architecture, API design, and the domain model: the things that are strategic.
-
-Reference: [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/)
-
-### Loops
-
-A loop is nothing but an automation, triggered by an event, that runs a sequence of agents to accomplish a goal. Humans are still in the loop for any [durable decisions](#durable-decisions).
-
-### Software Factory
-
-The ecosystem of loops forms a software factory. In essence, a software factory is a system in itself that allows the creation of [loops](#loops), provides observability, and allows humans to make decisions at the necessary places. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
-
-While there is no common definition for this modern software factory, this definition sums it up well: a software factory is harnessing loops at scale.
-
-Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/)
 
 ## References
 
@@ -106,6 +85,6 @@ Reference: [Addy Osmani: Software Factories](https://addyosmani.com/blog/softwar
 - [Lean](https://lean-lang.org/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [Learn TLA+](https://learntla.com/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [DORA Research](https://dora.dev/research/?view=detail) — cited in [Conclusion](#conclusion)
-- [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [Durable Decisions](#durable-decisions)
+- [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
-- [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Software Factory](#software-factory)
+- [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Scale Loops with Software Factories](#scale-loops-with-software-factories)
