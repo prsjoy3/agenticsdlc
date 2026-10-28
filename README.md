@@ -32,7 +32,7 @@ Below is a list of capabilities to progress in the adoption of the agentic SDLC.
 
 ### Set Up Your Codebase for Agents
 
-Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
+Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. Don't bloat AGENTS.md with things that agents are already good at. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
 
 ### Give Agents a Way to Verify Its Work
 
