@@ -59,6 +59,8 @@ At a minimum, a specification should contain:
 
 For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contract](https://beyond.minimumcd.org/docs/agentic-cd/specification/first-class-artifacts/).
 
+Working in small batches continues to be very important.
+
 ### Automate with Loops
 Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](https://kiro.dev/topics/frontier-engineering/) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
  
