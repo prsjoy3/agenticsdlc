@@ -34,6 +34,8 @@ Below is a list of capabilities to progress in the adoption of the agentic SDLC.
 
 Ensure linting and styling tools are set up for the codebase, preferably as a script that agents can run, and add them to the git pre-commit hooks as well. Any other context that you have but agents don't should be added to AGENTS.md; for example, any practices that are specific to your codebase. Don't bloat AGENTS.md with things that agents are already good at. The codebase is the best documentation that agents have, and agents follow the existing patterns in the codebase.
 
+Organize your project using tactical DDD, ports and adapters, or any other best practice to structure the codebase. In essence, business logic should be independently unit testable with as few dependencies as possible.
+
 ### Give Agents a Way to Verify Its Work
 
 Whether the implementation is happening on a developer machine or in a cloud agent as a part of a [loop](#automate-with-loops), it is important for the agent to verify its work as fast as possible—not just unit tests. It should be higher-level tests, UI tests, and also linting and style checks that are hooked as a part of the build / pre-commit hooks. It is important to give agents a fast feedback loop so that they can run tests locally and self-correct before you ever look at the code; otherwise, you're the bottleneck.
