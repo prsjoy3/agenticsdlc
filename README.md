@@ -22,7 +22,9 @@ With the advent of AI, typing code is no longer the bottleneck. It started with 
 
 This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
-> **Developers' job is not to use agents to write code. Their job is changing to lead the agents to help them write code.**
+> **The core principle**
+>
+> **Developers' job is not to use agents to write code. Their job is changing to lead the agents to help them write code. In short, stay in the outer loop and rigorously remove yourself from being the bottleneck.**
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
 
