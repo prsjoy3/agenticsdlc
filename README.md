@@ -24,7 +24,9 @@ This is a huge shift since the advent of higher-level programming languages, now
 
 > **The core principle**
 >
-> **Developers' job is not to use agents to write code. Their job is changing to lead the agents to help them write code. In short, stay in the outer loop and rigorously remove yourself from being the bottleneck.**
+> **Stay in the outer loop.**
+>
+> Developers' job is not to use agents to write code. Their job is changing to lead the agents to help them write code. Rigorously remove yourself from being the bottleneck.
 
 While chat-based agentic interfaces are great for certain aspects of software development, for example asking questions about the codebase or brainstorming ideas to decide what you want to build, once you have decided and created a good specification of what needs to be built, you no longer have to stay within the loop. Google's white paper calls this [orchestrator vs. conductor](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding).
 
