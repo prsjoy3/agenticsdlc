@@ -82,7 +82,9 @@ Since you can create loops for many things, it is important to have a system in 
 
 ### Scale Loops with Software Factories
 
-A software factory is harnessing [loops](#automate-with-loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation. See also [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/).
+A software factory is harnessing [loops](#automate-with-loops) at scale. In essence, it is a system in itself that is built to create loops, provides observability, and allows humans to make decisions at the necessary places. The ecosystem of loops forms a software factory. Even though the term has existed [since 1969](http://hdl.handle.net/1721.1/47992), this definition fits well for the current agentic era. What CI/CD is for DevOps transformation, a software factory is for agentic transformation.
+
+Is it time to build a software factory right now (November 2026)? Not yet. As more and more loops are being built, it could evolve into one. See also [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/).
 
 ## Conclusion
 While there will be gains by adopting AI in software development, it is still important to look at the core DORA model and DevOps culture as a whole to reap big benefits. See [DORA Research](https://dora.dev/research/?view=detail).
