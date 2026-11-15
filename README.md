@@ -4,6 +4,10 @@ A guide on adopting agentic AI in the software development lifecycle (SDLC).
 
 _Things are rapidly evolving; this is current as of October 2026._
 
+It is important to keep this in mind, from [No AI Slop: A Manifesto](https://www.slopmanifesto.com/):
+
+> "The world moves especially fast these days, but the goal of these resolutions is to embrace our important human role in harnessing AI safely, responsibly, in a way that creates value for everyone, and that will be relevant for years to come."
+
 ## Contents
 
 - [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
@@ -100,3 +104,4 @@ While there will be gains by adopting AI in software development, it is still im
 - [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Scale Loops with Software Factories](#scale-loops-with-software-factories)
+- [No AI Slop: A Manifesto](https://www.slopmanifesto.com/) — cited in the introduction
