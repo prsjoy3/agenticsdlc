@@ -24,7 +24,7 @@ It is important to keep this in mind, from [No AI Slop: A Manifesto](https://www
 
 With the advent of AI, typing code is no longer the bottleneck. It started with code completion, then to an AI assistant bundled within a classic IDE. It then shifted towards coding agents and agent-first interfaces. As this progression was happening, LLMs have gotten so much better at following larger instructions, gotten really good at writing code and tool calling, harnesses have gotten better as well.
 
-As Satya Nadella put it nicely:
+As [Satya Nadella put it nicely](https://youtu.be/0NE89Nzfk20):
 
 > Code has become an output instead of an input.
 
@@ -109,3 +109,4 @@ While there will be gains by adopting AI in software development, it is still im
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Scale Loops with Software Factories](#scale-loops-with-software-factories)
 - [No AI Slop: A Manifesto](https://www.slopmanifesto.com/) — cited in the introduction
+- [Software engineering after code becomes cheap with Satya Nadella (The Pragmatic Engineer)](https://youtu.be/0NE89Nzfk20) — cited in How AI Is Changing Software Development
