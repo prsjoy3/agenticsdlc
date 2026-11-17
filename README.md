@@ -22,7 +22,7 @@ It is important to keep this in mind, from [No AI Slop: A Manifesto](https://www
 
 ## How AI Is Changing Software Development
 
-With the advent of AI, typing code is no longer the bottleneck. It started with code completion, then to an AI assistant bundled within a classic IDE. It then shifted towards coding agents and agent-first interfaces. As this progression was happening, LLMs have gotten so much better at following larger instructions, gotten really good at writing code and tool calling, harnesses have gotten better as well. 
+With the advent of AI, typing code is no longer the bottleneck. It started with code completion, then to an AI assistant bundled within a classic IDE. It then shifted towards coding agents and agent-first interfaces. As this progression was happening, LLMs have gotten so much better at following larger instructions, gotten really good at writing code and tool calling, harnesses have gotten better as well. As Satya Nadella put it nicely, code has become an output instead of an input.
 
 This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
