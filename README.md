@@ -30,9 +30,7 @@ As [Satya Nadella put it nicely](https://youtu.be/0NE89Nzfk20):
 
 This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
-> **The core principle**
->
-> **Stay in the outer loop.**
+> **The core principle: Stay in the outer loop.**
 >
 > Developers' job is not to use agents to write code. Their job is changing to lead the agents to help them write code. Rigorously remove yourself from being the bottleneck.
 
