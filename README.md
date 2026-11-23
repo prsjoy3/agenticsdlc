@@ -28,7 +28,7 @@ As [Satya Nadella put it nicely](https://youtu.be/0NE89Nzfk20):
 
 > Code has become an output instead of an input.
 
-This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/) ([see also](https://www.shubhro.com/durable-decisions/)), like architecture, API design, and the domain model, etc the things that are strategic in nature.
+This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://www.shubhro.com/durable-decisions/), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
 > **The core principle: Stay in the outer loop.**
 >
@@ -58,9 +58,9 @@ Whether the implementation is happening on a developer machine or in a cloud age
 
 Of late, there has been a lot of interest in using [Lean](https://lean-lang.org/) and [TLA+](https://learntla.com/) to formally verify application logic.
 
-The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](https://kiro.dev/topics/frontier-engineering/) and proofs more than code diffs.
+The coding agent should also attach proofs of its verification on a pull request for human review. It is important for humans to review [durable decisions](https://www.shubhro.com/durable-decisions/) and proofs more than code diffs.
 
-Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](https://kiro.dev/topics/frontier-engineering/), and the code diff for any mission-critical PRs / codebases.
+Humans reviewing code diffs can soon become a bottleneck and need intelligent ways to be selective. Until there are good ways to do this, human reviews on a PR should focus on reviewing proofs and [durable decisions](https://www.shubhro.com/durable-decisions/), and the code diff for any mission-critical PRs / codebases.
 
 ### Adopt Spec-Driven Development
 
@@ -80,7 +80,7 @@ For a good model of what a spec should be, see [MinimumCD: Agent Delivery Contra
 Working in small batches continues to be very important.
 
 ### Automate with Loops
-Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](https://kiro.dev/topics/frontier-engineering/) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
+Lot of places where human attention was needed in traditional CI/CD, it can now be delegated to coding agents running in a remote machine. This approach is called as loops. A loop is nothing but an automation to accomplish a particular goal, triggered by an event or schedule, that runs a multi-agent workflows with humans on the loop to make any [durable decisions](https://www.shubhro.com/durable-decisions/) as needed for that workflow. With loops, software development is more observable and automatable than ever before, because it happens in a remote environment visible to the entire team. There is input and output, it can be eval'ed, it enables to find better cheaper model for a particular type of tasks etc. Since these loops are setup at a team level, the workflow is visible for the entire team and any optimization that can be done at the loop level, benefits the whole team.
  
 You can create loops for many things, for example:
 - Loops to create a spec from an idea
@@ -107,7 +107,6 @@ While there will be gains by adopting AI in software development, it is still im
 - [Lean](https://lean-lang.org/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [Learn TLA+](https://learntla.com/) — cited in [Give Agents a Way to Verify Its Work](#give-agents-a-way-to-verify-its-work)
 - [DORA Research](https://dora.dev/research/?view=detail) — cited in [Conclusion](#conclusion)
-- [Kiro: Frontier Engineering](https://kiro.dev/topics/frontier-engineering/) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Google white paper: The New SDLC with Vibe Coding](https://www.kaggle.com/whitepaper-the-new-SDLC-with-vibe-coding) — cited in [How AI Is Changing Software Development](#how-ai-is-changing-software-development)
 - [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Scale Loops with Software Factories](#scale-loops-with-software-factories)
 - [No AI Slop: A Manifesto](https://www.slopmanifesto.com/) — cited in the introduction
