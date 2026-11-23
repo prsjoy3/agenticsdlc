@@ -38,6 +38,10 @@ While chat-based agentic interfaces are great for certain aspects of software de
 
 One of the key lessons we learned from the DevOps transformation is to look at these as capabilities rather than as a maturity model, since a maturity model may give a false notion that we have arrived. It is important to follow a continuous improvement mindset, even more so in this agentic transformation era.
 
+In essence, using AI is about improving productivity. As [Will Larson puts it](https://lethain.com/passing-100-prs-in-a-week/):
+
+> Fundamentally, productivity with AI tooling comes down to optimizing the same software development loop we’ve been optimizing since I entered the industry. It’s just that we have many new techniques to optimize that loop, and many things that were previously unattainable for most companies (e.g. formal verification) are now attainable for anyone willing to make a persistent attempt.
+
 ## Capabilities
 
 Below is a list of capabilities to progress in the adoption of the agentic SDLC. Each capability is complementary to the others, and the sequence below also serves as building blocks. In essence, these capabilities maximize the ways for humans to stay in the outer loop and be an orchestrator, rather than being a conductor who stays in the inner loop.
@@ -108,3 +112,4 @@ While there will be gains by adopting AI in software development, it is still im
 - [Addy Osmani: Software Factories](https://addyosmani.com/blog/software-factories/) — cited in [Scale Loops with Software Factories](#scale-loops-with-software-factories)
 - [No AI Slop: A Manifesto](https://www.slopmanifesto.com/) — cited in the introduction
 - [Software engineering after code becomes cheap with Satya Nadella (The Pragmatic Engineer)](https://youtu.be/0NE89Nzfk20) — cited in How AI Is Changing Software Development
+- [Passing 100 PRs in a week (Will Larson, lethain.com)](https://lethain.com/passing-100-prs-in-a-week/) — cited in How AI Is Changing Software Development
