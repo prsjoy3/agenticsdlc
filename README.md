@@ -28,7 +28,7 @@ As [Satya Nadella put it nicely](https://youtu.be/0NE89Nzfk20):
 
 > Code has become an output instead of an input.
 
-This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/), like architecture, API design, and the domain model, etc the things that are strategic in nature.
+This is a huge shift since the advent of higher-level programming languages, now the intent can be represented in human language, and agents compiles it to a high level language, but with a nuance, it is non-deterministic in nature. Software engineers can now focus solely on [durable decisions](https://kiro.dev/topics/frontier-engineering/) ([see also](https://www.shubhro.com/durable-decisions/)), like architecture, API design, and the domain model, etc the things that are strategic in nature.
 
 > **The core principle: Stay in the outer loop.**
 >
@@ -113,3 +113,4 @@ While there will be gains by adopting AI in software development, it is still im
 - [No AI Slop: A Manifesto](https://www.slopmanifesto.com/) — cited in the introduction
 - [Software engineering after code becomes cheap with Satya Nadella (The Pragmatic Engineer)](https://youtu.be/0NE89Nzfk20) — cited in How AI Is Changing Software Development
 - [Passing 100 PRs in a week (Will Larson, lethain.com)](https://lethain.com/passing-100-prs-in-a-week/) — cited in How AI Is Changing Software Development
+- [Durable Decisions (Shubhro Saha)](https://www.shubhro.com/durable-decisions/) — cited in How AI Is Changing Software Development
